@@ -1,0 +1,43 @@
+{
+  "version": "1.0.0.0",
+  "name": "netcoreconf2022.bot.webchat",
+  "description": "NetCoreConf2022.Bot.WebChat",
+  "license": "MIT",
+  "keywords": [ "encamina", "bot", "chatbot", "netcoreconf", "2022", "netcoreconf2022" ],
+  "author": {
+    "name": "ENCAMINA, S.L.",
+    "email": "info@encamina.com",
+    "url": "https://www.encamina.com/"
+  },
+  "private": true,
+  "main": "bot-webchat.js",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "del-cli": "^5.0.0",
+    "dotenv-cli": "^6.0.0",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.9.2",
+    "webpack-merge": "^5.8.0",
+    "webpack-utf8-bom": "^1.4.0"
+  },
+  "scripts": {
+    "clean": "del-cli dist>nul 2>&1|echo.>nul",
+    "local": "npm run clean && webpack-dev-server --config webpack.lcl.js",
+    "build:dev": "npm run clean && webpack --config webpack.dev.js",
+    "build:pro": "npm run clean && webpack --config webpack.pro.js"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+<Project>
+
+  <PropertyGroup>
+    <Authors>ENCAMINA</Authors>
+    <Company>ENCAMINA, S.L.</Company>
+    <Product>NetCoreConf 2022 - Madrid - Las Recetas de la Abuela Bot - ENCAMINA</Product>
+    <Copyright>© ENCAMINA 2022</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+  </PropertyGroup>
+
+</Project>

@@ -1,0 +1,13 @@
+PartitionKey,RowKey,Timestamp,CompositeToken,CompositeToken@type,IsComposite,IsComposite@type,Terms,Terms@type,TermsSeparatorToken,TermsSeparatorToken@type
+management,migration,2022-11-05T00:00:00Z,,String,false,Boolean,migrar|migración|mover|trasladar,String,|,String
+troubleshooting,connection,2022-11-05T00:00:00Z,,String,false,Boolean,conexión|conexion|conectividad|conectar|conecte|conexiones|firewall,String,|,String
+troubleshooting,compatibility,2022-11-05T00:00:00Z,,String,false,Boolean,compatibiliad|compatible|vigente|vigencia,String,|,String
+management,security,2022-11-05T00:00:00Z,,String,false,Boolean,RBAC|rol|roles|privilegio|privilegios|Role Bases Access Control|Role-Based Access Control|JWT|JSON Web Token|token|autenticacion|autenticación|IAM|acceso|acceder|tenant|inquilino,String,|,String
+troubleshooting,exceptions,2022-11-05T00:00:00Z,,String,false,Boolean,error|errores|excepcion|excepción|excepciones|callstack|call stack|pila llamadas|pila de llamadas,String,|,String
+tools,cli,2022-11-05T00:00:00Z,,String,false,Boolean,cli|command line interface,String,|,String
+tools,sdk,2022-11-05T00:00:00Z,,String,false,Boolean,sdk|software development kit,String,|,String
+troubleshooting,authentication,2022-11-05T00:00:00Z,,String,false,Boolean,autenticación|autenticacion|autenticado|autenticados,String,|,String
+troubleshooting,bot,2022-11-05T00:00:00Z,,String,false,Boolean,depurar|debugear|debug|debugger|debuggear|problemas con mi bot|problemas con el bot|problemas con el bot|problemas del bot,String,|,String
+channels,facebook,2022-11-05T00:00:00Z,,String,false,Boolean,facebook,String,|,String
+channels,teams,2022-11-05T00:00:00Z,,String,false,Boolean,teams|Microsoft Teams|Office Teams|Office 365 Teams,String,|,String
+channels,directline,2022-11-05T00:00:00Z,,String,false,Boolean,directline|direct line|webchat|web chat|chat en web|chatweb|chat web,String,|,String
