@@ -71,6 +71,30 @@ internal static class Constants
         internal const string DefaultIntentPredictionServiceName = @"DefaultIntentPredictionServiceName";
 
         /// <summary>
+        /// The name of the <c>KnowledgeBaseName</c> configuration parameter with the name of the 
+        /// Custom Question Answering (CQA) project to use.
+        internal const string KnowledgeBaseName = @"KnowledgeBaseName";
+
+        /// <summary>
+        /// The name of the <c>KnowledgeDeploymentSlot</c> configuration parameter. The retrieved value
+        /// should be either '<c>production</c>' or '<c>test</c>'.
+        /// </summary>
+        internal const string KnowledgeDeploymentSlot = @"KnowledgeDeploymentSlot";
+
+        /// <summary>
+        /// The name of the <c>KnowledgeKeyCredential</c> configuration parameter containing the
+        /// key credential required to send requests to a Custom Question Answering (CQA) project.
+        /// </summary>
+        internal const string KnowledgeKeyCredential = @"KnowledgeKeyCredential";
+
+        /// <summary>
+        /// The name of the <c>KnowledgeUri</c> configuration parameter with the URI (usually an URL)
+        /// to the Azure Cognitive Service for Language resource that has the Custom Question Answering (CQA) 
+        /// projects.
+        /// </summary>
+        internal const string KnowledgeUri = @"KnowledgeUri";
+
+        /// <summary>
         /// The name of the <c>QuestionAnsweringConfidenceScoreThreshold</c> configuration parameter.
         /// It corresponds to the minimum threshold score for answers, value ranges from 0 to 1.
         /// </summary>

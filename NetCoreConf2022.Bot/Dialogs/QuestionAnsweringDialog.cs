@@ -17,12 +17,6 @@ internal sealed class QuestionAnsweringDialog : Dialog
 {
     private const string VerboseActivityValueParameter = @"x-encamina-questionanswering-verbose";
 
-    private const string EndpointUrl = @"https://cog-lang-relv-testing.cognitiveservices.azure.com/";
-    private const string KeyCredential = @"24ee6d43fa5641b9b1997e7035a4e9ba";
-    private const string KnowledgeBaseDeploymentSlot = @"production"; // This value can be 'production', thus pointing to a deployed knowledge base; or 'test', which points to a non-deployed knowledge base.
-    private const string KnowledgeBaseName = @"KB-BOT-FRAMEWORK";
-    ////private const string KnowledgeBaseName = @"KB-CHITCHAT-BOT-FRAMEWORK";
-
     private readonly bool withVerbose;
     private readonly QuestionAnsweringClient client;
     private readonly QuestionAnsweringProject project;
@@ -35,10 +29,11 @@ internal sealed class QuestionAnsweringDialog : Dialog
 
         withVerbose = configuration.GetValue<bool>(Constants.Settings.Verbose, false);
 
-        client = new QuestionAnsweringClient(new Uri(EndpointUrl), new AzureKeyCredential(KeyCredential));
-        project = new QuestionAnsweringProject(KnowledgeBaseName, KnowledgeBaseDeploymentSlot);
+        client = new QuestionAnsweringClient(configuration.GetValue<Uri>(Constants.Settings.KnowledgeUri), new AzureKeyCredential(configuration.GetValue<string>(Constants.Settings.KnowledgeKeyCredential)));
+        project = new QuestionAnsweringProject(configuration.GetValue<string>(Constants.Settings.KnowledgeBaseName), configuration.GetValue<string>(Constants.Settings.KnowledgeDeploymentSlot));
     }
 
+    /// <inheritdoc />
     public override async Task<DialogTurnResult> BeginDialogAsync(DialogContext dc, object options = null, CancellationToken cancellationToken = default)
     {
         var answerOptions = new AnswersOptions()
@@ -59,10 +54,10 @@ internal sealed class QuestionAnsweringDialog : Dialog
         var message = dc.Context.Activity.Text;
 
         // Normalize symbols and diacritics...
-        ////message = NormalizeDiacritics(message);
+        message = NormalizeDiacritics(message);
 
         // Detect metadata to filter...
-        ////(await metadataHandler.HandleMessageAsync(message, cancellationToken)).ToList().ForEach(m => answerOptions.Filters.MetadataFilter.Metadata.Add(new MetadataRecord(m.Key, m.Value)));
+        (await metadataHandler.HandleMessageAsync(message, cancellationToken)).ToList().ForEach(m => answerOptions.Filters.MetadataFilter.Metadata.Add(new MetadataRecord(m.Key, m.Value)));
 
         var response = await client.GetAnswersAsync(message, project, answerOptions, cancellationToken);
 
