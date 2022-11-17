@@ -17,7 +17,7 @@ module.exports = merge(common, {
     plugins: [
         ...common.plugins,
         new webpack.DefinePlugin({
-            'process.env.webChatIdPrefix': JSON.stringify('netcoreconf-2022-bot-lcl-'),
+            'process.env.webChatIdPrefix': JSON.stringify('netcoreconf-2022-bot-'),
             'process.env.localStoragePrefix': JSON.stringify('x-netcoreconf-2022-'),
             'process.env.dlToken': JSON.stringify('osipV32VSfc.RmuWUuQby2GwcjCfsuvGvJCssz9tQFy__CNpyQ4m6Yk'),
             'process.env.username': JSON.stringify('UsuarioLocal'),
