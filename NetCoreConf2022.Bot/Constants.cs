@@ -71,8 +71,9 @@ internal static class Constants
         internal const string DefaultIntentPredictionServiceName = @"DefaultIntentPredictionServiceName";
 
         /// <summary>
-        /// The name of the <c>KnowledgeBaseName</c> configuration parameter with the name of the 
+        /// The name of the <c>KnowledgeBaseName</c> configuration parameter with the name of the
         /// Custom Question Answering (CQA) project to use.
+        /// </summary>
         internal const string KnowledgeBaseName = @"KnowledgeBaseName";
 
         /// <summary>
@@ -89,7 +90,7 @@ internal static class Constants
 
         /// <summary>
         /// The name of the <c>KnowledgeUri</c> configuration parameter with the URI (usually an URL)
-        /// to the Azure Cognitive Service for Language resource that has the Custom Question Answering (CQA) 
+        /// to the Azure Cognitive Service for Language resource that has the Custom Question Answering (CQA)
         /// projects.
         /// </summary>
         internal const string KnowledgeUri = @"KnowledgeUri";
